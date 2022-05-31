@@ -29,9 +29,12 @@ public class DFS {
         de si meta es true, terminemos la ejecucion del metodo.
          */
         if (first == end) {
-            this.meta = true;
+            
             // agregamos a la propiedad steps que llegamos al final del procedimiento
-            this.steps = this.steps + "\n\nLlegamos al Nodo " + first + " Final del proceso";
+            if (!this.meta) {
+                this.steps = this.steps + "\n\nLlegamos al Nodo " + first + " Final del proceso";
+            }
+            this.meta = true;
         }
         if (meta) {
             return;
@@ -129,10 +132,51 @@ public class DFS {
                 }
 
             } else if ("antihorario".equals(direction.toLowerCase())) {
+                // busqueda en sentido antihorario
+ 
+                /* 
+                agregamos a nuestra lista que sirve de registro los subnodos del nodo first 
+                que le pasamos al metodo si es que no estan en la lista, el estado que se les
+                pasa es 0 porque no se van a revisar todavia.
+                 */
+                // for para iterar los subnodos
+                for (int i = 0; i <  node.size(); i++) {
+                    // se verifica que no esten en la lista de registros de procedimientos
+                    if (!this.visited(node.get(i))) {
+                        // si no estan, se agregan a la lista
+                        this.addVisitedNode(node.get(i), 0, node.get(0));
+                    }
+                }
 
+                // guardamos los pasos realizados hasta ahora en la propiedad steps
+                String step = "\n\nNodo Actual: " + first;
+                String nodo = "\n\nNodo:\t\t";
+                String revisado = "\nRevisado:\t";
+                String antecesor = "\nAntecesor:\t";
+                for (int i = 0; i < this.visited.size(); i++) {
+                    nodo += "" + this.visited.get(i).get(0) +"\t";
+                    revisado += ""+ this.visited.get(i).get(1)  +"\t";
+                    antecesor += ""+ this.visited.get(i).get(2)  + "\t";
+                }
+                this.steps += step + nodo + revisado + antecesor;
+
+                /*
+                emplearemos la recursividad para llamar de nevo a esta funcion para el ultimo elemento
+                de nuestra lista de registros, pero tenemos que comprobar que si estado sea 0, 
+                de que no a sido revisado
+                 */
+                // for para iterar desde el final los elementos registrados
+                for (int i = 0; i < this.visited.size(); i++) {
+                    // verificamos que su estado sea 0
+                    if (this.visited.get(i).get(1) == 0) {
+                        // realizamos la recursividad para el elemento con estado 0
+                        DepthFirstSearch(this.visited.get(i).get(0), end, direction);
+                    }
+                }
             }
 
         } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
