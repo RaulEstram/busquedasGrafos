@@ -52,9 +52,7 @@ public class HillClimbing {
                 /* 
                 obtenemos los subnodos del nodo first
                 guardamos los pasos en steps y seleccionamos  el mas cercano al nodo end
-                 */
-
- /*
+                 
                 definimos algunos Strings que nos ayudaran a darle formato a los pasos 
                 que hace el programa para mostrarlos al usuario final
                  */
@@ -80,7 +78,7 @@ public class HillClimbing {
                     // realizmos nuestros areglos en nuestras variables strings para definir los pasos realizados para el usuario
                     nodo += "" + this.nodes.get(nodeList.get(i) - 1).get(0) + "\t";
                     revisado += "" + this.getDistancia(nodeList.get(i), end) + "\t";
-                    antecesor += "" + this.nodes.get(nodeList.get(i) - 1).get(2) + "\t";
+                    antecesor += "" + first + "\t";
                 }
 
                 // agregamos a la propiedad steps, el paso realizado de comparacion de la distancia de los subnodos de first
@@ -164,7 +162,11 @@ public class HillClimbing {
         }
         return false;
     }
-
+    /* 
+    este metodo nos sirve para obtener las distancias entre un nodo y otro
+    para evitar cualquier error al obtener la distancia usamos un try catch para saber
+    exactamente cual es la combinacion adecuada que nos da la distancia
+    */
     private Integer getDistancia(int start, int end) {
         try {
             int distance;
@@ -180,7 +182,8 @@ public class HillClimbing {
         }
         return 0;
     }
-
+    
+    // este metodo nos regresa los pasos realizados en este procedimiento
     public String getSteps() {
         return steps;
     }
