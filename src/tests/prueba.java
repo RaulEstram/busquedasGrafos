@@ -2,21 +2,27 @@ package tests;
 
 import java.util.*;
 
-import data.Nodes;
-import search.DFS;
-
+import search.DepthFirstSearch;
+import search.HillClimbing;
+import data.ReadFileCSV;
 
 public class prueba {
 
     public static void main(String[] args) {
-        Nodes nodes_n = new Nodes();
-        ArrayList<List<Integer>> nodes = nodes_n.getNodes();
-                
-        DFS d = new DFS();
-        d.DepthFirstSearch(8,18, "horario");
         
-        System.out.println(d.getSteps());
+        ReadFileCSV distancias = new ReadFileCSV("distancias.csv");
+        ReadFileCSV nodos = new ReadFileCSV("nodos.csv");
         
+        //DepthFirstSearch dfs = new DepthFirstSearch(nodos.getData());
+        //dfs.search(8, 18, "antihorario");
+
+        //System.out.println(dfs.getSteps());
+        //System.out.println(dfs.getRute(18));
         
-    }    
+        HillClimbing hc = new HillClimbing(nodos.getData(), distancias.getData());
+        hc.search(8, 18, "antihorario");
+        System.out.println(hc.getSteps());
+        System.out.println(hc.getRute());
+
+    }
 }
