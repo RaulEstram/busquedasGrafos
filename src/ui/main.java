@@ -220,6 +220,7 @@ public class main extends javax.swing.JFrame {
         getContentPane().add(PanelContent, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     // codigo para cuando nuestro boton Home hace click 
