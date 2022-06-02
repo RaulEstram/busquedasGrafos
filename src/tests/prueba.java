@@ -11,8 +11,8 @@ public class prueba {
 
     public static void main(String[] args) {
         
-        ReadFileCSV distancias = new ReadFileCSV("distancias.csv");
-        ReadFileCSV nodos = new ReadFileCSV("nodos.csv");
+        //ReadFileCSV distancias = new ReadFileCSV("distancias.csv");
+        //ReadFileCSV nodos = new ReadFileCSV("nodos.csv");
         
         /*
         DepthFirstSearch dfs = new DepthFirstSearch(nodos.getData());
@@ -26,13 +26,13 @@ public class prueba {
         System.out.println(hc.getSteps());
         System.out.println(hc.getRute());
         */
-        
+        /*
         BestFirst bf = new BestFirst(nodos.getData(), distancias.getData());
         
         bf.search(1, 18, "antihorario");
         System.out.println(bf.getSteps());
         System.out.println(bf.getRute());
-        
+        */
     }
  
 }

@@ -2,11 +2,20 @@ package ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 public class main extends javax.swing.JFrame {
 
     public static String nodesPath = "";
     public static String distancesPath = "";
+
+    // icono del JFrame
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logo.png"));
+        return retValue;
+    }
 
     public main() {
         initComponents();
@@ -19,6 +28,9 @@ public class main extends javax.swing.JFrame {
         PanelContent.add(fh, BorderLayout.CENTER);
         PanelContent.revalidate();
         PanelContent.repaint();
+        
+        // definimos nuevo icono
+        setIconImage(getIconImage());
 
     }
 
@@ -370,7 +382,6 @@ public class main extends javax.swing.JFrame {
     private void ButtonPrimeroMejorMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMouseReleased
         ButtonPrimeroMejor.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonPrimeroMejorMouseReleased
-
 
     public static void main(String args[]) {
 
