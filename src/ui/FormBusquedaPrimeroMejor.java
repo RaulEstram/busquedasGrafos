@@ -29,7 +29,7 @@ public class FormBusquedaPrimeroMejor extends javax.swing.JPanel {
 
         ButtonCalcular.setBackground(new java.awt.Color(201, 214, 223));
         ButtonCalcular.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ButtonCalcular.setText("Calcular Busqueda por profundidad");
+        ButtonCalcular.setText("Calcular por Primero Mejor");
         ButtonCalcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButtonCalcular.setOpaque(true);
         ButtonCalcular.addMouseListener(new java.awt.event.MouseAdapter() {
