@@ -64,13 +64,15 @@ public class BestFirst {
             if ("horario".equals(direccion.toLowerCase())) {
                 // usamos un for para iterar los subnodos y saber cual es el que tiene la F mas chica
                 for (int i = 1; i < nodeList.size(); i++) {
-                    // antecesor + nodo , nodo + final
-                    // obtenemos el F para el subnodo iterado
-                    int f = this.getDistancia(nodeList.get(0), nodeList.get(i)) + this.getDistancia(nodeList.get(i), end);
-                    // si el F es mas chico que el minF, minF obtendra el valor de f y el node sera el nodo del F que remplazo minF
-                    if (f < minF) {
-                        minF = f;
-                        node = nodeList.get(i);
+                    if (!this.isVisited(nodeList.get(i))) {
+                        // antecesor + nodo , nodo + final
+                        // obtenemos el F para el subnodo iterado
+                        int f = this.getDistancia(nodeList.get(0), nodeList.get(i)) + this.getDistancia(nodeList.get(i), end);
+                        // si el F es mas chico que el minF, minF obtendra el valor de f y el node sera el nodo del F que remplazo minF
+                        if (f < minF) {
+                            minF = f;
+                            node = nodeList.get(i);
+                        }
                     }
                 }
                 /*
@@ -101,19 +103,33 @@ public class BestFirst {
                 this.steps += "\nNodo Selecionado: " + node;
 
                 // utilizamos la recursividad para llamar de nuevo a esta funcion
+
+                /*
+                for (int i = this.visited.size() - 1; i > 0; i--) {
+                    // verificamos que su estado sea 0
+                    if (this.visited.get(i).get(1) == 0) {
+                        // realizamos la recursividad para el elemento con estado 0
+                        search(this.visited.get(i).get(0), end, direction);
+                    }
+                }
+                 */
                 this.search(node, end, direccion);
+
             } else if ("antihorario".equals(direccion.toLowerCase())) {
                 // busqueda por sentido antihorario
 
                 // usamos un for para iterar los subnodos y saber cual es el que tiene la F mas chica
                 for (int i = nodeList.size() - 1; i > 0; i--) {
-                    // antecesor + nodo , nodo + final
-                    // obtenemos el F para el subnodo iterado
-                    int f = this.getDistancia(nodeList.get(0), nodeList.get(i)) + this.getDistancia(nodeList.get(i), end);
-                    // si el F es mas chico que el minF, minF obtendra el valor de f y el node sera el nodo del F que remplazo minF
-                    if (f < minF) {
-                        minF = f;
-                        node = nodeList.get(i);
+                    // comprobamos que el subnodo a iterar no este en nuestro historial
+                    if (!this.isVisited(nodeList.get(i))) {
+                        // antecesor + nodo , nodo + final
+                        // obtenemos el F para el subnodo iterado
+                        int f = this.getDistancia(nodeList.get(0), nodeList.get(i)) + this.getDistancia(nodeList.get(i), end);
+                        // si el F es mas chico que el minF, minF obtendra el valor de f y el node sera el nodo del F que remplazo minF
+                        if (f < minF) {
+                            minF = f;
+                            node = nodeList.get(i);
+                        }
                     }
                 }
                 /*
@@ -208,7 +224,7 @@ public class BestFirst {
     private void addHistorial() {
         String step = "\n\n\n\nAntecesor\tNodo\tG\t+\tH\t=\tf\tCerrado\n";
         for (int i = 0; i < this.visited.size(); i++) {
-            step += "" + this.visited.get(i).get(0) + "\t\t"
+            step += "" + this.visited.get(i).get(0) + "\t"
                     + "" + this.visited.get(i).get(1) + "\t"
                     + "" + this.visited.get(i).get(2) + "\t"
                     + "+\t"

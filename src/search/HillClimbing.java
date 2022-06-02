@@ -41,8 +41,8 @@ public class HillClimbing {
                 this.addVisitedNode(first, this.getDistancia(first, end), 0);
                 // agregamos a la propiedad steps este paso 
                 String step = "Nodo Con el que empezamos: " + first + "\n\n"
-                        + "Nodo:\t\t" + first + "\n"
-                        + "Valor:\t\t" + this.getDistancia(first, end) + "\n"
+                        + "Nodo:\t" + first + "\n"
+                        + "Valor:\t" + this.getDistancia(first, end) + "\n"
                         + "Antecesor:\t0\n";
                 this.steps += step;
             }
@@ -57,7 +57,7 @@ public class HillClimbing {
                 que hace el programa para mostrarlos al usuario final
                  */
                 String step = "\n\nNodo Actual: " + first;
-                String nodo = "\n\nNodo:\t\t";
+                String nodo = "\n\nNodo:\t";
                 String revisado = "\nRevisado:\t";
                 String antecesor = "\nAntecesor:\t";
                 // definimos algunas variables que nos ayudaran al control del nodo con la menor distancia
@@ -84,7 +84,7 @@ public class HillClimbing {
                 // agregamos a la propiedad steps, el paso realizado de comparacion de la distancia de los subnodos de first
                 this.steps += step + nodo + revisado + antecesor + "\n\nNodo Seleccionado: " + node + "\n";
                 // agregamos a nuestro historial la informaicon del nodo con la menor distancia
-                this.addVisitedNode(node, this.getDistancia(node, end), first);
+                this.addVisitedNode(node, this.getDistancia(node, end), end);
                 // utilizamos la recursividad para llamar de nuevo a esta funcion
                 search(node, end, direccion);
 
@@ -99,7 +99,7 @@ public class HillClimbing {
                 que hace el programa para mostrarlos al usuario final
                  */
                 String step = "\n\nNodo Actual: " + first;
-                String nodo = "\n\nNodo:\t\t";
+                String nodo = "\n\nNodo:\t";
                 String revisado = "\nRevisado:\t";
                 String antecesor = "\nAntecesor:\t";
                 // definimos algunas variables que nos ayudaran al control del nodo con la menor distancia
@@ -128,6 +128,22 @@ public class HillClimbing {
                 // agregamos a nuestro historial la informaicon del nodo con la menor distancia
                 this.addVisitedNode(node, this.getDistancia(node, end), first);
                 // utilizamos la recursividad para llamar de nuevo a esta funcion
+                
+                /*
+                for (int i = this.visited.size() - 1; i > 0; i--) {
+                    // verificamos que su estado sea 0
+                    if (this.visited.get(i).get(1) == 0) {
+                        // realizamos la recursividad para el elemento con estado 0
+                        search(this.visited.get(i).get(0), end, direction);
+                    }
+                }
+                
+                */
+                
+                for (int i = this.visited.size() - 1; i > 0; i--) {
+                    
+                }
+                
                 search(node, end, direccion);
             }
 

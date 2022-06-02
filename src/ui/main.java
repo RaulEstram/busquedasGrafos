@@ -44,6 +44,7 @@ public class main extends javax.swing.JFrame {
         PanelContent = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tipos de busqueda en grafos");
         setBackground(new java.awt.Color(255, 255, 255));
 
         Nav.setBackground(new java.awt.Color(201, 214, 223));
@@ -208,7 +209,7 @@ public class main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     // codigo para cuando nuestro boton Home hace click 
     private void ButtonHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonHomeMouseClicked
         // Mostramos el contenido de nuestro JPanel pertinente en nuestro Form
@@ -222,7 +223,7 @@ public class main extends javax.swing.JFrame {
         // cambiamos titulo del form main
         TituloForm.setText("Home");
     }//GEN-LAST:event_ButtonHomeMouseClicked
-    
+
     // codigo para cuando nuestro boton De seleccionar Nodos y Distancias hace click 
     private void ButtonNodosDistanciasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonNodosDistanciasMouseClicked
         // Mostramos el contenido de nuestro JPanel pertinente en nuestro Form
@@ -236,7 +237,7 @@ public class main extends javax.swing.JFrame {
         // cambiamos titulo del form main
         TituloForm.setText("Seleccion de Informaicon");
     }//GEN-LAST:event_ButtonNodosDistanciasMouseClicked
-    
+
     // codigo para cuando nuestro boton De busqueda por profudidad hace click 
     private void ButtonBProdundidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBProdundidadMouseClicked
         // Mostramos el contenido de nuestro JPanel pertinente en nuestro Form
@@ -250,7 +251,7 @@ public class main extends javax.swing.JFrame {
         // cambiamos titulo del form main
         TituloForm.setText("Busqueda por profundidad");
     }//GEN-LAST:event_ButtonBProdundidadMouseClicked
-    
+
     // codigo para cuando nuestro boton De busqueda por escalada simple hace click 
     private void ButtonEscaladaSimpleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEscaladaSimpleMouseClicked
         // Mostramos el contenido de nuestro JPanel pertinente en nuestro Form
@@ -264,7 +265,7 @@ public class main extends javax.swing.JFrame {
         // cambiamos titulo del form main
         TituloForm.setText("Busqueda de Escalada Simple");
     }//GEN-LAST:event_ButtonEscaladaSimpleMouseClicked
-    
+
     // codigo para cuando nuestro boton De busqueda primero mejor hace click 
     private void ButtonPrimeroMejorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMouseClicked
         // Mostramos el contenido de nuestro JPanel pertinente en nuestro Form
@@ -279,105 +280,100 @@ public class main extends javax.swing.JFrame {
         TituloForm.setText("Busqueda Primero Mejor");
     }//GEN-LAST:event_ButtonPrimeroMejorMouseClicked
 
+    // metodos de UI sin importancia realmente 
     private void ButtonHomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonHomeMouseEntered
-        ButtonHome.setBackground(new Color(82,97,107));
-        ButtonHome.setForeground(new Color(255,255,255));
+        ButtonHome.setBackground(new Color(82, 97, 107));
+        ButtonHome.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_ButtonHomeMouseEntered
 
     private void ButtonHomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonHomeMouseExited
-        ButtonHome.setBackground(new Color(201,214,223));
-        ButtonHome.setForeground(new Color(0,0,0));
+        ButtonHome.setBackground(new Color(201, 214, 223));
+        ButtonHome.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_ButtonHomeMouseExited
 
     private void ButtonHomeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonHomeMousePressed
-        ButtonHome.setBackground(new Color(30,32,34));
+        ButtonHome.setBackground(new Color(30, 32, 34));
     }//GEN-LAST:event_ButtonHomeMousePressed
 
     private void ButtonHomeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonHomeMouseReleased
-        ButtonHome.setBackground(new Color(82,97,107));
+        ButtonHome.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonHomeMouseReleased
 
     private void ButtonNodosDistanciasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonNodosDistanciasMouseEntered
-        ButtonNodosDistancias.setBackground(new Color(82,97,107));
-        ButtonNodosDistancias.setForeground(new Color(255,255,255));
+        ButtonNodosDistancias.setBackground(new Color(82, 97, 107));
+        ButtonNodosDistancias.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_ButtonNodosDistanciasMouseEntered
 
     private void ButtonNodosDistanciasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonNodosDistanciasMouseExited
-        ButtonNodosDistancias.setBackground(new Color(201,214,223));
-        ButtonNodosDistancias.setForeground(new Color(0,0,0));
+        ButtonNodosDistancias.setBackground(new Color(201, 214, 223));
+        ButtonNodosDistancias.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_ButtonNodosDistanciasMouseExited
 
     private void ButtonNodosDistanciasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonNodosDistanciasMousePressed
-        ButtonNodosDistancias.setBackground(new Color(30,32,34));
+        ButtonNodosDistancias.setBackground(new Color(30, 32, 34));
     }//GEN-LAST:event_ButtonNodosDistanciasMousePressed
 
     private void ButtonNodosDistanciasMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonNodosDistanciasMouseReleased
-        ButtonNodosDistancias.setBackground(new Color(82,97,107));
+        ButtonNodosDistancias.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonNodosDistanciasMouseReleased
 
     private void ButtonBProdundidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBProdundidadMouseEntered
-        ButtonBProdundidad.setBackground(new Color(82,97,107));
-        ButtonBProdundidad.setForeground(new Color(255,255,255));
+        ButtonBProdundidad.setBackground(new Color(82, 97, 107));
+        ButtonBProdundidad.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_ButtonBProdundidadMouseEntered
 
     private void ButtonBProdundidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBProdundidadMouseExited
-        ButtonBProdundidad.setBackground(new Color(201,214,223));
-        ButtonBProdundidad.setForeground(new Color(0,0,0));
+        ButtonBProdundidad.setBackground(new Color(201, 214, 223));
+        ButtonBProdundidad.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_ButtonBProdundidadMouseExited
 
     private void ButtonBProdundidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBProdundidadMousePressed
-        ButtonBProdundidad.setBackground(new Color(30,32,34));
+        ButtonBProdundidad.setBackground(new Color(30, 32, 34));
     }//GEN-LAST:event_ButtonBProdundidadMousePressed
 
     private void ButtonBProdundidadMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBProdundidadMouseReleased
-        ButtonBProdundidad.setBackground(new Color(82,97,107));
+        ButtonBProdundidad.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonBProdundidadMouseReleased
 
     private void ButtonEscaladaSimpleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEscaladaSimpleMouseEntered
-        ButtonEscaladaSimple.setBackground(new Color(82,97,107));
-        ButtonEscaladaSimple.setForeground(new Color(255,255,255));
+        ButtonEscaladaSimple.setBackground(new Color(82, 97, 107));
+        ButtonEscaladaSimple.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_ButtonEscaladaSimpleMouseEntered
 
     private void ButtonEscaladaSimpleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEscaladaSimpleMouseExited
-        ButtonEscaladaSimple.setBackground(new Color(201,214,223));
-        ButtonEscaladaSimple.setForeground(new Color(0,0,0));
+        ButtonEscaladaSimple.setBackground(new Color(201, 214, 223));
+        ButtonEscaladaSimple.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_ButtonEscaladaSimpleMouseExited
 
     private void ButtonEscaladaSimpleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEscaladaSimpleMousePressed
-        ButtonEscaladaSimple.setBackground(new Color(30,32,34));
+        ButtonEscaladaSimple.setBackground(new Color(30, 32, 34));
     }//GEN-LAST:event_ButtonEscaladaSimpleMousePressed
 
     private void ButtonEscaladaSimpleMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEscaladaSimpleMouseReleased
-        ButtonEscaladaSimple.setBackground(new Color(82,97,107));
+        ButtonEscaladaSimple.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonEscaladaSimpleMouseReleased
 
     private void ButtonPrimeroMejorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMouseEntered
-        ButtonPrimeroMejor.setBackground(new Color(82,97,107));
-        ButtonPrimeroMejor.setForeground(new Color(255,255,255));
+        ButtonPrimeroMejor.setBackground(new Color(82, 97, 107));
+        ButtonPrimeroMejor.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_ButtonPrimeroMejorMouseEntered
 
     private void ButtonPrimeroMejorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMouseExited
-        ButtonPrimeroMejor.setBackground(new Color(201,214,223));
-        ButtonPrimeroMejor.setForeground(new Color(0,0,0));
+        ButtonPrimeroMejor.setBackground(new Color(201, 214, 223));
+        ButtonPrimeroMejor.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_ButtonPrimeroMejorMouseExited
 
     private void ButtonPrimeroMejorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMousePressed
-        ButtonPrimeroMejor.setBackground(new Color(30,32,34));
+        ButtonPrimeroMejor.setBackground(new Color(30, 32, 34));
     }//GEN-LAST:event_ButtonPrimeroMejorMousePressed
 
     private void ButtonPrimeroMejorMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonPrimeroMejorMouseReleased
-        ButtonPrimeroMejor.setBackground(new Color(82,97,107));
+        ButtonPrimeroMejor.setBackground(new Color(82, 97, 107));
     }//GEN-LAST:event_ButtonPrimeroMejorMouseReleased
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

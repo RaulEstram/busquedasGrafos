@@ -1,5 +1,6 @@
 package ui;
 
+import java.awt.Color;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -35,10 +36,23 @@ public class FormSeleccionNodosDistancias extends javax.swing.JPanel {
         ButtonSelectNodes.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         ButtonSelectNodes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ButtonSelectNodes.setText("...");
+        ButtonSelectNodes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButtonSelectNodes.setOpaque(true);
         ButtonSelectNodes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ButtonSelectNodesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ButtonSelectNodesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ButtonSelectNodesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ButtonSelectNodesMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ButtonSelectNodesMouseReleased(evt);
             }
         });
 
@@ -50,10 +64,23 @@ public class FormSeleccionNodosDistancias extends javax.swing.JPanel {
         ButtonSelectDistance.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         ButtonSelectDistance.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ButtonSelectDistance.setText("...");
+        ButtonSelectDistance.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButtonSelectDistance.setOpaque(true);
         ButtonSelectDistance.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ButtonSelectDistanceMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ButtonSelectDistanceMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ButtonSelectDistanceMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ButtonSelectDistanceMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ButtonSelectDistanceMouseReleased(evt);
             }
         });
 
@@ -69,10 +96,23 @@ public class FormSeleccionNodosDistancias extends javax.swing.JPanel {
         ButtonConfirm.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         ButtonConfirm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ButtonConfirm.setText("Confirmar");
+        ButtonConfirm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButtonConfirm.setOpaque(true);
         ButtonConfirm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ButtonConfirmMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ButtonConfirmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ButtonConfirmMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ButtonConfirmMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ButtonConfirmMouseReleased(evt);
             }
         });
 
@@ -114,7 +154,7 @@ public class FormSeleccionNodosDistancias extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ButtonSelectDistance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pathDistance, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                 .addComponent(ButtonConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -175,6 +215,61 @@ public class FormSeleccionNodosDistancias extends javax.swing.JPanel {
         }
 
     }//GEN-LAST:event_ButtonConfirmMouseClicked
+    
+    // metodos de UI sin importancia realmente 
+    private void ButtonSelectNodesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectNodesMouseEntered
+        ButtonSelectNodes.setBackground(new Color(82,97,107));
+        ButtonSelectNodes.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_ButtonSelectNodesMouseEntered
+
+    private void ButtonSelectNodesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectNodesMouseExited
+        ButtonSelectNodes.setBackground(new Color(201,214,223));
+        ButtonSelectNodes.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_ButtonSelectNodesMouseExited
+
+    private void ButtonSelectNodesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectNodesMousePressed
+        ButtonSelectNodes.setBackground(new Color(30,32,34));
+    }//GEN-LAST:event_ButtonSelectNodesMousePressed
+
+    private void ButtonSelectNodesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectNodesMouseReleased
+        ButtonSelectNodes.setBackground(new Color(82,97,107));
+    }//GEN-LAST:event_ButtonSelectNodesMouseReleased
+
+    private void ButtonSelectDistanceMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectDistanceMouseEntered
+        ButtonSelectDistance.setBackground(new Color(82,97,107));
+        ButtonSelectDistance.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_ButtonSelectDistanceMouseEntered
+
+    private void ButtonSelectDistanceMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectDistanceMouseExited
+        ButtonSelectDistance.setBackground(new Color(201,214,223));
+        ButtonSelectDistance.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_ButtonSelectDistanceMouseExited
+
+    private void ButtonSelectDistanceMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectDistanceMousePressed
+        ButtonSelectDistance.setBackground(new Color(30,32,34));
+    }//GEN-LAST:event_ButtonSelectDistanceMousePressed
+
+    private void ButtonSelectDistanceMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSelectDistanceMouseReleased
+        ButtonSelectDistance.setBackground(new Color(82,97,107));
+    }//GEN-LAST:event_ButtonSelectDistanceMouseReleased
+
+    private void ButtonConfirmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonConfirmMouseEntered
+        ButtonConfirm.setBackground(new Color(82,97,107));
+        ButtonConfirm.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_ButtonConfirmMouseEntered
+
+    private void ButtonConfirmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonConfirmMouseExited
+        ButtonConfirm.setBackground(new Color(201,214,223));
+        ButtonConfirm.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_ButtonConfirmMouseExited
+
+    private void ButtonConfirmMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonConfirmMousePressed
+        ButtonConfirm.setBackground(new Color(30,32,34));
+    }//GEN-LAST:event_ButtonConfirmMousePressed
+
+    private void ButtonConfirmMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonConfirmMouseReleased
+        ButtonConfirm.setBackground(new Color(82,97,107));
+    }//GEN-LAST:event_ButtonConfirmMouseReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

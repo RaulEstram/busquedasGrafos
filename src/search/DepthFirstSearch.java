@@ -65,7 +65,7 @@ public class DepthFirstSearch {
             this.addVisitedNode(first, 1, 0);
             // agregamos a la propiedad steps este paso 
             String step = "Nodo Actual: " + first + "\n\n"
-                    + "Nodo:\t\t" + first + "\n"
+                    + "Nodo:\t" + first + "\n"
                     + "Revisado:\t0\n"
                     + "Antecesor:\t0\n";
             this.steps += step;
@@ -80,7 +80,7 @@ public class DepthFirstSearch {
                     ArrayList<Integer> newState = new ArrayList<>();
                     newState.add(first);
                     newState.add(1);
-                    newState.add(this.visited.get(this.visited.size() - 1).get(2));
+                    newState.add(this.visited.get(i).get(2));
                     // aqui es donde "actualizamos" el estado
                     this.visited.set(i, newState);
                     // salimos del for para no iterar de mas
@@ -119,7 +119,7 @@ public class DepthFirstSearch {
 
                 // guardamos los pasos realizados hasta ahora en la propiedad steps
                 String step = "\n\nNodo Actual: " + first;
-                String nodo = "\n\nNodo:\t\t";
+                String nodo = "\n\nNodo:\t";
                 String revisado = "\nRevisado:\t";
                 String antecesor = "\nAntecesor:\t";
                 for (int i = 0; i < this.visited.size(); i++) {
@@ -162,7 +162,7 @@ public class DepthFirstSearch {
 
                 // guardamos los pasos realizados hasta ahora en la propiedad steps
                 String step = "\n\nNodo Actual: " + first;
-                String nodo = "\n\nNodo:\t\t";
+                String nodo = "\n\nNodo:\t";
                 String revisado = "\nRevisado:\t";
                 String antecesor = "\nAntecesor:\t";
                 for (int i = 0; i < this.visited.size(); i++) {
