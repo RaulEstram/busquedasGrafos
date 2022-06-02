@@ -25,16 +25,14 @@ public class prueba {
         System.out.println(hc.getSteps());
         System.out.println(hc.getRute());
         */
+        /*
         BestFirst bf = new BestFirst(nodos.getData(), distancias.getData());
         
         bf.search(8, 18, "antihorario");
         System.out.println(bf.getSteps());
         System.out.println(bf.getRute());
+        */
     }
+ 
 }
 
-/*
-
-8 
-
-*/
